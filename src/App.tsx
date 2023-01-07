@@ -46,12 +46,21 @@ function App() {
         variant="outlined"
       >
         <Typography
+          // className="nanoseconds_text"
           level="h1"
           component="h1"
           textColor="white"
           sx={(theme) => theme.typography.display1}
         >
-          Give Me Avatar!
+          <p>Give Me Avatar!</p>
+        </Typography>
+        <Typography
+          level="h5"
+          component="h1"
+          textColor="white"
+          sx={{fontStyle:"italic" , pb:5, fontSize:22, fontFamily:""}}
+        >
+          A free online random avatar generator for making beautiful personal avatar within seconds   
         </Typography>
 
         <div className="App">

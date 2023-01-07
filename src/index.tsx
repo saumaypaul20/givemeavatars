@@ -22,7 +22,7 @@ const customTheme = extendTheme({
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       fontSize: 70,
-      py: 12,
+      pt: 2,
     },
   },
 });
