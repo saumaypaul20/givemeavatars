@@ -52,7 +52,7 @@ function App() {
           textColor="white"
           sx={(theme) => theme.typography.display1}
         >
-          <p>Give Me Avatar!</p>
+          Give Me Avatar!
         </Typography>
         <Typography
           level="h5"
