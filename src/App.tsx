@@ -12,7 +12,7 @@ function App() {
   const [dataSet, setDataSet] = useState<any[]>([]);
   console.log("🚀 ~ file: App.tsx ~ line 11 ~ App ~ dataSet", dataSet);
   const [count, setCount] = useState(1);
-  const arrayNumber = 48;
+  const arrayNumber = 16;
   useEffect(() => {
     setDataSet(
       Array.from({ length: arrayNumber }, () => {
