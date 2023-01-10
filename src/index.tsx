@@ -1,17 +1,21 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+// import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { CssVarsProvider, extendTheme } from "@mui/joy";
-import {Helmet} from "react-helmet";
+import { Box, CssVarsProvider, extendTheme, Typography } from "@mui/joy";
+import { Helmet } from "react-helmet";
+
+console.log = () => {};
+console.error = () => {};
+
+const App = React.lazy(() => import("./App"));
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
 const customTheme = extendTheme({
-  
   typography: {
     display1: {
       // `--joy` is the default CSS variable prefix.
@@ -30,15 +34,33 @@ const customTheme = extendTheme({
 
 root.render(
   <React.StrictMode>
-     <Helmet>
-                <meta charSet="utf-8" />
-                <title>Give Me Avatar | Free Online Avatar Generator</title>
-                <link rel="canonical" href="https://givemeavatar.netlify.app" />
-                <meta name="description" content="A free online random avatar generator for making beautiful personal avatar within seconds. Generate avatar for your social media accounts quickly. Avatars can be used in profile or display picture or for development. Best tool for developers." />
-            </Helmet>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Give Me Avatar | Free Online Avatar Generator</title>
+      <link rel="canonical" href="https://givemeavatar.netlify.app" />
+      <meta
+        name="description"
+        content="A free online random avatar generator for making beautiful personal avatar within seconds. Generate avatar for your social media accounts quickly. Avatars can be used in profile or display picture or for development. Best tool for developers."
+      />
+    </Helmet>
 
     <CssVarsProvider theme={customTheme}>
-      <App />
+      <Suspense
+        fallback={
+          <Box>
+            <Typography
+              level="h5"
+              component="h1"
+              textColor="white"
+              sx={{ fontStyle: "italic", pb: 5, fontSize: 22, fontFamily: "" }}
+            >
+              Loading Avatars for you!
+            </Typography>
+          </Box>
+        }
+      >
+        <App />
+      </Suspense>
     </CssVarsProvider>
   </React.StrictMode>
 );
