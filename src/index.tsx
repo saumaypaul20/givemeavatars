@@ -1,9 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM, {hydrateRoot} from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { CssVarsProvider, extendTheme } from "@mui/joy";
+import {Helmet} from "react-helmet";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -29,6 +30,13 @@ const customTheme = extendTheme({
 
 root.render(
   <React.StrictMode>
+     <Helmet>
+                <meta charSet="utf-8" />
+                <title>Give Me Avatar | Free Online Avatar Generator</title>
+                <link rel="canonical" href="https://givemeavatar.netlify.app" />
+                <meta name="description" content="A free online random avatar generator for making beautiful personal avatar within seconds. Generate avatar for your social media accounts quickly. Avatars can be used in profile or display picture or for development. Best tool for developers." />
+            </Helmet>
+
     <CssVarsProvider theme={customTheme}>
       <App />
     </CssVarsProvider>
