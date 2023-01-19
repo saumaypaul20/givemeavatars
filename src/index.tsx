@@ -51,7 +51,6 @@ root.render(
             <Typography
               level="h5"
               component="h1"
-              textColor="white"
               sx={{ fontStyle: "italic", pb: 5, fontSize: 22, fontFamily: "" }}
             >
               Loading Avatars for you!
