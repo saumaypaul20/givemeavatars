@@ -5,7 +5,6 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { Box, CssVarsProvider, extendTheme, Typography } from "@mui/joy";
 import { Helmet } from "react-helmet";
-
 console.log = () => {};
 console.error = () => {};
 
@@ -51,9 +50,10 @@ root.render(
             <Typography
               level="h5"
               component="h1"
-              sx={{ fontStyle: "italic", pb: 5, fontSize: 22, fontFamily: "" }}
+              sx={{ fontStyle: "italic", pb: 5, fontSize: 22, fontFamily: "", textAlign: "center" }}
             >
-              Loading Avatars for you!
+             <h1>GiveMeAvatars</h1> 
+             <h2>Loading Avatars for you!</h2> 
             </Typography>
           </Box>
         }
