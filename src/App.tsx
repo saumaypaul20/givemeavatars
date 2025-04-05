@@ -6,11 +6,8 @@ import { generateRandomStyle } from "./utils/data";
 import CssBaseline from "@mui/joy/CssBaseline";
 import { Sheet, Typography } from "@mui/joy";
 
- 
-
 function App() {
   const [dataSet, setDataSet] = useState<any[]>([]);
-  console.log("🚀 ~ file: App.tsx ~ line 11 ~ App ~ dataSet", dataSet);
   const [count, setCount] = useState(1);
   const arrayNumber = 16;
   useEffect(() => {
@@ -58,9 +55,10 @@ function App() {
           level="h5"
           component="h1"
           textColor="white"
-          sx={{fontStyle:"italic" , pb:5, fontSize:22, fontFamily:""}}
+          sx={{ fontStyle: "italic", pb: 5, fontSize: 22, fontFamily: "" }}
         >
-          A free online random avatar generator for making beautiful personal avatar within seconds   
+          A free online random avatar generator for making beautiful personal
+          avatar within seconds
         </Typography>
 
         <div className="App">

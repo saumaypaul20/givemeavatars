@@ -20,11 +20,6 @@ function downloadBlob(blob: any, filename: any) {
 }
 
 const AvatarComp = (props: any) => {
-  console.log(
-    "🚀 ~ file: AvatarComp.tsx ~ line 13 ~ AvatarComp ~ props",
-    props
-  );
-
   const svgRef = useRef<any>(null);
 
   const downloadSVG = useCallback(() => {
@@ -75,11 +70,19 @@ const AvatarComp = (props: any) => {
                   <IconButton
                     onClick={downloadSVG}
                     variant="outlined"
-                    sx={{ mb: 1, borderColor:"#fff","&:hover": { borderColor: "#fff" }   }}
+                    sx={{
+                      mb: 1,
+                      borderColor: "#fff",
+                      "&:hover": { borderColor: "#fff" },
+                    }}
                   >
                     {" "}
                     <DownloadIcon
-                      sx={{ fontSize: 25, color: "#fff","&:hover": { color: "#000" }  }}
+                      sx={{
+                        fontSize: 25,
+                        color: "#fff",
+                        "&:hover": { color: "#000" },
+                      }}
                     ></DownloadIcon>
                   </IconButton>
                 </Box>
