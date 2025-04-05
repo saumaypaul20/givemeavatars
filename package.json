@@ -28,7 +28,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "homepage": "hhttps://saumaypaul20.github.io/givemeavatars/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-helmet": "6.1.6"
+    "@types/react-helmet": "6.1.6",
+    "gh-pages": "6.3.0"
   }
 }
