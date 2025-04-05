@@ -1,5 +1,6 @@
 {
   "name": "givemeavatars",
+  "homepage": "hhttps://saumaypaul20.github.io/givemeavatars/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,7 +31,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "homepage": "hhttps://saumaypaul20.github.io/givemeavatars/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
